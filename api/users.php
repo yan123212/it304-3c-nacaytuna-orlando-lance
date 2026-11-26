@@ -116,6 +116,7 @@ if (count($scheduleGroups) > 1) {
         FROM rehearsals a JOIN rehearsals b
           ON a.id < b.id
          AND a.rehearsal_date = b.rehearsal_date
+         AND a.rehearsal_date >= CURRENT_DATE
          AND a.start_time < b.end_time
          AND a.end_time > b.start_time
         WHERE a.group_id IN ($marksA) AND b.group_id IN ($marksB)

@@ -42,7 +42,7 @@ database.sql         your tables + sample data
 2. Start **Apache** and **MySQL** in XAMPP.
 3. In **phpMyAdmin** (http://localhost/phpmyadmin): create a database named `it304_local`, then **Import** `database.sql`.
 4. Copy `api/config.local.example.php` to `api/config.local.php`. Edit it only if your MySQL password isn't empty.
-5. Check the API: open `http://localhost/YOUR-REPO/api/health.php`. You should see `"db":"ok"`.
+5. Check the API: open `http://localhost/it304-3c-nacaytuna-orlando-lance/api/health.php`. You should see `"db":"ok"`.
 6. Run the frontend:
    ```bash
    cd frontend

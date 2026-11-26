@@ -21,6 +21,7 @@ CREATE TABLE user_groups (
   user_id INT NOT NULL,
   group_id INT NOT NULL,
   PRIMARY KEY (user_id, group_id),
+  INDEX idx_user_groups_group (group_id, user_id),
   CONSTRAINT fk_user_groups_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   CONSTRAINT fk_user_groups_group FOREIGN KEY (group_id) REFERENCES theater_groups(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -43,7 +44,7 @@ CREATE TABLE rehearsals (
 -- concurrent requests from creating overlapping rehearsals.
 CREATE TABLE schedule_mutex (
   id TINYINT PRIMARY KEY
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO schedule_mutex (id) VALUES (1);
 
