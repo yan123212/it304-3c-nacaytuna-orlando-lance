@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+frontend/node_modules/
+
+# local secrets (never push these)
+api/config.local.php
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# IMPORTANT: frontend/dist is NOT ignored on purpose.
+# The server publishes your BUILT app, so run "npm run build" and commit frontend/dist.

@@ -1,0 +1,5 @@
+# never serve local config or hidden files
+<FilesMatch "^(config\.local.*\.php|\..*)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes
